@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Button?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.control.TextField?>
+
+<VBox alignment="CENTER" spacing="20.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="id.ac.itb.stima.PrimaryController">
+   <children>
+      <Button fx:id="fileChooserButton" text="Choose Input File" onAction="#chooseFile"/>
+      <Label fx:id="fileLabel" text="No file selected" />
+      
+      <GridPane fx:id="gridPane" hgap="2" vgap="2">
+      </GridPane>
+
+      <Label fx:id="solutionFoundLabel" text="No solution found." />
+
+
+      <Label fx:id="timeLabel" text="Time taken: " />
+      <Label fx:id="timeShow" text="-" />
+
+      <Label fx:id="countLabel" text="Total attempts: " />
+      <Label fx:id="countShow" text="-" />
+
+      <TextField fx:id="textFieldTxt" promptText="Enter filename"/>
+      <Button fx:id="saveTxtButton" text="Save answer on TXT" onAction="#saveTxt"/>
+      <TextField fx:id="textFieldImage" promptText="Enter filename"/>
+      <Button fx:id="saveImageButton" text="Save answer with Image" onAction="#saveImage"/>
+
+   </children>
+   <padding>
+      <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+   </padding>
+</VBox>
