@@ -245,7 +245,7 @@ public class PrimaryController {
                 @Override
                 protected Void call() {
                     startTime = System.nanoTime();
-                    boolean success = backtrack(gridStack, listOfTransformedBlocks, N, M, P, count);
+                    boolean success = backtrack(gridStack, listOfTransformedBlocks, N, M, count);
                     long endTime = System.nanoTime(); 
                     double miliseconds = (endTime - startTime) / 1_000_000;
                     System.out.printf("Execution Time: %.0f ms%n", miliseconds);
@@ -307,7 +307,7 @@ public class PrimaryController {
         return variants;
     }
 
-    private boolean backtrack(List<char[][]> gridStack, List<List<char[][]>> listOfTransformedBlocks, int N, int M, int P, long[] count) {
+    private boolean backtrack(List<char[][]> gridStack, List<List<char[][]>> listOfTransformedBlocks, int N, int M, long[] count) {
         char[][] grid = gridStack.get(gridStack.size() - 1);
     
         if (listOfTransformedBlocks.isEmpty()) {
@@ -334,7 +334,7 @@ public class PrimaryController {
                                 Platform.runLater(() -> updateGridDisplay(newGrid,String.valueOf(count[0])));
                             }
                             List<List<char[][]>> tail = new ArrayList<>(listOfTransformedBlocks.subList(1, listOfTransformedBlocks.size()));
-                            boolean success = backtrack(gridStack, tail, N, M, P, count);
+                            boolean success = backtrack(gridStack, tail, N, M, count);
                             if (success) return true;
                             gridStack.remove(gridStack.size() - 1);
                         } else {
@@ -452,7 +452,7 @@ public class PrimaryController {
     @FXML
     private void initialize() {
         solutionFoundLabel.setVisible(false);
-        solutionFoundLabel.setManaged(false);  // Remove label from layout
+        solutionFoundLabel.setManaged(false);
     }
    
 }
