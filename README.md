@@ -1,18 +1,26 @@
-## Getting Started
+# Brute Force IQ Puzzle Solver
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+## 📌 Deskripsi
+Program ini merupakan solver brute force untuk puzzle IQ yang mencoba mencocokkan potongan puzzle ke dalam grid menggunakan pencarian menyeluruh. Program ini dilengkapi dengan **GUI berbasis JavaFX** untuk menampilkan solusi secara visual serta mendukung input file, penyimpanan hasil dalam format teks, dan ekspor gambar hasil solusi.
 
-## Folder Structure
+## 📋 Requirement dan Instalasi
+### 🔧 Prasyarat
+- **JDK 23 atau lebih baru** (pastikan sudah diinstal dan dikonfigurasi dengan benar)
+- **JavaFX 17.0.11**
+- **AWT** untuk pemrosesan gambar
+- **Maven** untuk manajemen dependency
 
-The workspace contains two folders by default, where:
+### 📂 Instalasi
+1. **Pastikan** JDK 23 dan JavaFX 17.0.11 telah terinstal.
+2. **Clone** atau **download** proyek ini ke komputer Anda.
+3. **Pastikan untuk menggunakan Maven**, dependency akan otomatis terunduh.
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+## 🚀 Cara Menjalankan Program
+### 💻 Menjalankan dengan Maven
+```sh
+mvn javafx:run
+```
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
-
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
-
-## Dependency Management
-
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+## 👦 Penulis
+Nama: Nathanael Rachmat <br></br>
+NIM: 13523142
